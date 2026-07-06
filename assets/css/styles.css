@@ -5,7 +5,7 @@
   --text-main: #2a2a2a;
   --text-soft: #5b5b5b;
   --line: #e8e5de;
-  --card: rgba(255, 255, 255, 0.86);
+  --card: rgba(255, 255, 255, 0.3);
   --header-h: 88px;
   --radius: 18px;
   --shadow: 0 16px 34px rgba(30, 30, 30, 0.08);
@@ -141,8 +141,8 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 1px solid #ede9e1;
-  background: #fff;
-  opacity: 0;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0.2;
   transform: translateY(80px);
   transition: transform 0.85s ease, opacity 0.85s ease;
 }
@@ -207,6 +207,17 @@ body {
   font-size: 15px;
 }
 
+.menu-item a {
+  color: #2f5f90;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.menu-item a:hover,
+.menu-item a:focus-visible {
+  color: #163e66;
+}
+
 .page-footer {
   text-align: center;
   color: #6a6a6a;
@@ -232,6 +243,29 @@ body {
 
   .menu-text {
     padding: 26px 28px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .menu-panel a {
+    font-size: 19px;
+  }
+
+  .menu-title {
+    font-size: 24px;
+  }
+
+  .menu-item h2,
+  .menu-item h3 {
+    font-size: 21px;
+  }
+
+  .menu-item p {
+    font-size: 19px;
+  }
+
+  .page-footer {
+    font-size: 18px;
   }
 }
 
